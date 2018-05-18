@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>About</title>
+       <link href="/assets/style1.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class= "body2">
+     <div id= "header">
+ 		<h3><%= name %></h3>
+ 	 </div>
+     <% include partials/nav.ejs %>
+
+<div class="form-style-5">
+<form method="post" action="/notices/add">
+<fieldset>
+<legend><span class="number">1</span> Description</legend>
+<input type="text" name="date" placeholder="Date of Notice(DD/MM/YYYY)">
+<input type="text" name="description" placeholder="What is the Notice About?">   
+</fieldset>
+<fieldset>
+<legend><span class="number">2</span> Notice</legend>
+<textarea name="notice" placeholder="Write the notice"></textarea>
+</fieldset>
+<input type="submit" value="Submit" />
+</form>
+</div>
+    </body>
+  </html>

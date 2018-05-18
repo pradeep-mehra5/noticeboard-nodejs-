@@ -1,0 +1,20 @@
+<% include partials/header.ejs %>
+ 	<div id= "header">
+ 		<h3><%= name %></h3>
+ 	</div>
+  <% include partials/nav.ejs %>
+  <ol>
+  	
+<% notices.forEach(function(data){ %>
+	<li>
+		<ul><div id="boxing">
+		<li><strong>Date :</strong><%= data.date  %> <br></li>
+	  <li><strong>For :</strong><%= data.description %> </a> <br></li>
+	  <li><strong>Notice :</strong><%= data.notice %> </a> <br><br></li><a href="#" class= "deleteNotice" 
+	  data-id="<%= data._id %>">Delete</a>
+	  </ul></div>
+	</li>
+<% }); %>
+<ol>
+ </body>
+ </html>
